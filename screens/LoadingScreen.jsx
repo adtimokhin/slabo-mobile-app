@@ -2,6 +2,8 @@ import React, { useEffect, useLayoutEffect } from "react";
 import { View, ActivityIndicator, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
+import Logo from "../assets/LOGO.svg";
+
 const LoadingScreen = () => {
   const navigation = useNavigation();
 
@@ -14,8 +16,9 @@ const LoadingScreen = () => {
   useEffect(() => {
     const fetchData = async () => {
       const timer = setTimeout(() => {
+        // TODO: UNCOMMENT
         navigation.replace("Home"); // Navigate to your home screen or any other screen
-      }, 10); // 1 second delay
+      }, 5000); // 1 second delay
 
       return () => clearTimeout(timer);
     };
@@ -24,8 +27,11 @@ const LoadingScreen = () => {
   }, [navigation]);
 
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <ActivityIndicator size="large" color="#0000ff" />
+    <View
+      style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+      className="bg-main"
+    >
+      <Logo className="w-full" />
     </View>
   );
 };

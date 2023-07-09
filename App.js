@@ -1,14 +1,21 @@
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
+import QuestDescriptionPage from "./screens/QuestDescriptionPage";
+import DescriptionPage from "./screens/DescriptionPage";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View className="bg-main flex-1 items-center justify-center">
-      <Text>Open up App.js todddp!</Text>
-      <Text>Open up App.js todddp!</Text>
-
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Description" component={DescriptionPage} />
+        <Stack.Screen name="Home" component={QuestDescriptionPage} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 

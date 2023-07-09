@@ -16,9 +16,10 @@ const LoadingScreen = () => {
   useEffect(() => {
     const fetchData = async () => {
       const timer = setTimeout(() => {
-        // TODO: UNCOMMENT
+        
         navigation.replace("Home"); // Navigate to your home screen or any other screen
-      }, 5000); // 1 second delay
+      }, 10000); // 1 second delay
+      // TODO: Change the loading method
 
       return () => clearTimeout(timer);
     };

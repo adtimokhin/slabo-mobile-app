@@ -2,7 +2,7 @@ import { useNavigation } from "@react-navigation/native";
 import { useLayoutEffect } from "react";
 import { SafeAreaView, Text, TouchableOpacity, View } from "react-native";
 
-const QuestDescriptionPage = () => {
+const QuestDescriptionScreen = () => {
   const navigation = useNavigation();
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -25,4 +25,4 @@ const QuestDescriptionPage = () => {
   );
 };
 
-export default QuestDescriptionPage;
+export default QuestDescriptionScreen;

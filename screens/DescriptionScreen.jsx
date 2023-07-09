@@ -2,7 +2,7 @@ import { useNavigation } from "@react-navigation/native";
 import { useLayoutEffect } from "react";
 import { View, Text, SafeAreaView, TouchableOpacity } from "react-native";
 
-const DescriptionPage = () => {
+const DescriptionScreen = () => {
 
     const navigation = useNavigation();
     useLayoutEffect(()=> {
@@ -19,8 +19,14 @@ const DescriptionPage = () => {
       }}>
       <Text>TO QUEST PAGE</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity className="bg-lime-400 text-bold font-bold text-3xl" onPress={()=>{
+        navigation.navigate('Congrats')
+      }}>
+      <Text>TO CONGRATS PAGE</Text>
+        </TouchableOpacity>
     </SafeAreaView>
   );
 };
 
-export default DescriptionPage;
+export default DescriptionScreen;

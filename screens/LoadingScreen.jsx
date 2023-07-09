@@ -1,21 +1,21 @@
 import React, { useEffect, useLayoutEffect } from "react";
-import { View, ActivityIndicator } from "react-native";
+import { View, ActivityIndicator, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 const LoadingScreen = () => {
   const navigation = useNavigation();
 
-  useLayoutEffect(()=> {
+  useLayoutEffect(() => {
     navigation.setOptions({
-        headerShown: false
-    })
-}, [])
+      headerShown: false,
+    });
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
       const timer = setTimeout(() => {
         navigation.replace("Home"); // Navigate to your home screen or any other screen
-      }, 1000); // 1 second delay
+      }, 10); // 1 second delay
 
       return () => clearTimeout(timer);
     };

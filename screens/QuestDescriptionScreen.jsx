@@ -1,6 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import { useLayoutEffect } from "react";
-import { SafeAreaView, Text, TouchableOpacity, View } from "react-native";
+import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const QuestDescriptionScreen = () => {
   const navigation = useNavigation();
@@ -11,7 +11,7 @@ const QuestDescriptionScreen = () => {
   }, []);
   return (
     <SafeAreaView className="bg-[#F6F9FC] flex-1">
-      <Text>Quest</Text>
+      <Text style={{fontFamily: "codeNext"}} className="font-semibold text-2xl">Quest</Text>
 
       <TouchableOpacity
         className="bg-lime-400 text-bold font-bold text-3xl"
